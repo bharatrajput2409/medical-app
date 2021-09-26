@@ -10,6 +10,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import Tip from "./Tip";
+import Utils from "./Utils";
 const useStyles = makeStyles((theme) => ({
   root: {},
   urlTextFiled: {
@@ -41,6 +43,8 @@ export const Editor = () => {
   const classes = useStyles();
   return (
     <div className="text-editor">
+      <Tip />
+      <Utils />
       <EditorToolbar />
       <div className="ql-container-paper">
         <TextField

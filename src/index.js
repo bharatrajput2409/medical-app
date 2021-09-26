@@ -3,8 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import theme from "./components/theme/MuiTheme";
 import { ThemeProvider } from "@material-ui/styles";
+import { createTheme } from "@material-ui/core";
+import { indigo } from "@material-ui/core/colors";
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: indigo["A400"],
+    },
+  },
+});
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

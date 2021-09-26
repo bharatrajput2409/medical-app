@@ -24,6 +24,8 @@
 }
 .text-editor {
   background: rgb(245, 245, 245);
+  position: relative;
+  overflow: hidden;
 }
 .ql-active {
   color: red !important;
