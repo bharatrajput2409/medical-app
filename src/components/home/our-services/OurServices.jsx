@@ -11,18 +11,17 @@ function OurServices() {
         our services
       </Typography>
       <Grid container style={{ maxWidth: "1400px", margin: "1rem auto" }}>
-        <Grid item xs={12} md={6} lg={3} style={{ padding: "0 .5rem" }}>
-          <Card1 />
-        </Grid>
-        <Grid item xs={12} md={6} lg={3} style={{ padding: "0 .5rem" }}>
-          <Card2 />
-        </Grid>
-        <Grid item xs={12} md={6} lg={3} style={{ padding: "0 .5rem" }}>
-          <Card3 />
-        </Grid>
-        <Grid item xs={12} md={6} lg={3} style={{ padding: "0 .5rem" }}>
-          <Card1 />
-        </Grid>
+        {[<Card1 />, <Card2 />, <Card3 />, <Card1 />].map((item, index) => (
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={3}
+            style={{ padding: "0 .5rem", margin: "0.5rem 0" }}
+          >
+            {item}
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
