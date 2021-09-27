@@ -10,7 +10,7 @@ function OurServices() {
       <Typography component="h3" variant="h6" className="banner-heading">
         our services
       </Typography>
-      <Grid container style={{ maxWidth: "1300px", margin: "1rem auto" }}>
+      <Grid container style={{ maxWidth: "1400px", margin: "1rem auto" }}>
         <Grid item xs={12} md={6} lg={3} style={{ padding: "0 .5rem" }}>
           <Card1 />
         </Grid>

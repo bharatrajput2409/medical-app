@@ -8,7 +8,7 @@ function Card1() {
         src={card_triangle}
         alt=""
         className="heart_with_wings card3"
-        style={{ width: "360px" }}
+        style={{ width: "100%" }}
       />
       <Typography
         variant="h6"

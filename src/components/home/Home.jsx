@@ -2,6 +2,7 @@ import { Typography } from "@material-ui/core";
 import React from "react";
 import "./home.css";
 import OurServices from "./our-services/OurServices";
+import TopReads from "./top-reads";
 function Home() {
   return (
     <div className="container">
@@ -17,6 +18,7 @@ function Home() {
         </div>
       </div>
       <OurServices />
+      <TopReads />
     </div>
   );
 }

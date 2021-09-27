@@ -56,7 +56,7 @@ function SuggestionCard() {
           component="p"
           className={classes.typographycaption}
         >
-          Heart atack is generally caused by...
+          Heart atack is generally caused by oilly food
         </Typography>
       </div>
     </Link>
