@@ -6,10 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@material-ui/styles";
 import { createTheme } from "@material-ui/core";
 import { indigo } from "@material-ui/core/colors";
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
-      main: indigo["A400"],
+      main: "#FFFFFF",
     },
   },
 });

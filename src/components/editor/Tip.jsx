@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "absolute",
     width: "300px",
-    top: "41px",
+    top: "43px",
     zIndex: "100",
     padding: ".5rem",
     bottom: "0",
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     position: "absolute",
-    top: "0",
+    top: "0px",
     right: "-60px",
     background: "white",
     zIndex: "99",

@@ -70,7 +70,7 @@ export const formats = [
 
 // Quill Toolbar component
 export const QuillToolbar = () => (
-  <Paper id="toolbar">
+  <Paper id="toolbar" elevation="2">
     <span className="ql-formats">
       <button className="ql-h1 toolbar-custom-button">H1</button>
       <button className="ql-h2 toolbar-custom-button">H2</button>

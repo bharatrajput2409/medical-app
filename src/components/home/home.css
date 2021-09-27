@@ -1,0 +1,38 @@
+.container {
+  background: rgba(0, 0, 0, 0.02);
+}
+.container .top-banner {
+  height: 400px;
+  background: tomato;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-image: url("/src/media/top_banner_img.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.container .top-banner .heading-wraper {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+.container .top-banner .slogan-heading {
+  font-size: 32px;
+  font-weight: 600;
+}
+.container .top-banner .slogan-description {
+  width: 50%;
+  font-weight: 400;
+}
+.container .our-services {
+}
+.banner-heading {
+  margin: 1rem 2rem !important;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.7);
+}
+.our-services .our-services-cards {
+  min-height: 400px;
+  padding: 0.5rem;
+  position: relative;
+}

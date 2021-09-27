@@ -1,7 +1,6 @@
 #toolbar {
   display: flex;
   justify-content: center;
-  border: none;
 }
 .ql-container-paper {
   max-width: 1000px;

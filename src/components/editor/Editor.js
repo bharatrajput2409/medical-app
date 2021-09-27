@@ -2,6 +2,8 @@ import React from "react";
 import ReactQuill from "react-quill";
 import EditorToolbar, { modules, formats } from "./Toolbar";
 import "react-quill/dist/quill.snow.css";
+import DraftsIcon from "@material-ui/icons/Drafts";
+import PublishIcon from "@material-ui/icons/Publish";
 import {
   Chip,
   makeStyles,
@@ -12,6 +14,7 @@ import {
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import Tip from "./Tip";
 import Utils from "./Utils";
+import Button from "../common/styledcomponent/Button";
 const useStyles = makeStyles((theme) => ({
   root: {},
   urlTextFiled: {
@@ -23,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
       outline: "none",
       border: "none",
     },
-    padding: " 8px 14px",
-    width: "calc(100% - 28px)",
+    padding: "8px 14px",
+    width: "calc(100%)",
   },
   autocomplete: {
     width: "calc(100% - 28px)",
@@ -33,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiOutlinedInput-root fieldset": {
       border: "none",
     },
+  },
+  btnIcon: {
+    margin: "0 0 0 .5rem",
   },
 }));
 export const Editor = () => {
@@ -93,6 +99,14 @@ export const Editor = () => {
             )}
           />
         </Paper>
+        <div style={{ float: "right" }}>
+          <Button>
+            Save Draft <DraftsIcon className={classes.btnIcon} />
+          </Button>
+          <Button>
+            Publish <PublishIcon className={classes.btnIcon} />
+          </Button>
+        </div>
       </div>
     </div>
   );
