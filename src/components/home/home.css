@@ -10,6 +10,7 @@
   background-image: url("/src/media/top_banner_img.svg");
   background-repeat: no-repeat;
   background-position: right;
+  background-size: contain;
 }
 .container .top-banner .heading-wraper {
   max-width: 1300px;
@@ -35,4 +36,46 @@
   min-height: 400px;
   padding: 0.5rem;
   position: relative;
+  overflow: hidden;
+}
+.heading-color {
+  color: rgba(0, 0, 0, 0.6);
+}
+.text-center {
+  text-align: center;
+}
+.our-services-cards .heart_with_wings,
+.our-services-cards .single_ellipse {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  transition: top 300ms;
+}
+.our-services-cards .heart_with_wings {
+  top: -50px;
+}
+.our-services-cards .heart_with_wings.card2 {
+  top: -100px;
+}
+.our-services-cards .single_ellipse {
+  top: 380px;
+}
+
+.our-services-cards:hover .heart_with_wings {
+  top: 10px;
+}
+.our-services-cards:hover .single_ellipse {
+  top: 120px;
+}
+.our-services .our-services-cards .card-heading {
+  position: relative;
+  transition: top 300ms;
+  top: 80px;
+}
+.our-services .our-services-cards .card-heading.card2 {
+  top: 100px;
+}
+.our-services .our-services-cards:hover .card-heading {
+  top: 150px;
 }

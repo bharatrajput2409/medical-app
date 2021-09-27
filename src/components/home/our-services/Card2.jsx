@@ -1,21 +1,24 @@
 import { Paper, Typography } from "@material-ui/core";
 import React from "react";
-import heart_with_wings from "../../../media/heart_with_wings.svg";
-import single_ellipse from "../../../media/single_ellipse.svg";
+import medicine_bottle from "../../../media/medicine_bottle.svg";
 function Card1() {
   return (
     <Paper className="our-services-cards">
-      <img src={heart_with_wings} alt="" className="heart_with_wings" />
-      <img src={single_ellipse} alt="" className="single_ellipse" />
+      <img
+        src={medicine_bottle}
+        alt=""
+        className="heart_with_wings card2"
+        style={{ width: "100px" }}
+      />
       <Typography
         variant="h6"
-        className="heading-color text-center card-heading"
+        className="heading-color text-center card-heading card2"
       >
-        Health Care
+        Medicines
       </Typography>
       <Typography
         variant="subtitle1"
-        className="card-heading"
+        className="card-heading card2"
         style={{ textAlign: "justify" }}
       >
         Shades of blue include cyan, navy, turquoise, aqua, midnight blue, sky
