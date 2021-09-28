@@ -1,5 +1,7 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
+import Footer from "../footer";
+import Explore from "./explore";
 import "./home.css";
 import OurServices from "./our-services/OurServices";
 import TopReads from "./top-reads";
@@ -19,6 +21,8 @@ function Home() {
       </div>
       <OurServices />
       <TopReads />
+      <Explore />
+      <Footer />
     </div>
   );
 }
