@@ -5,14 +5,14 @@ export const links = [
   },
   {
     path: "/",
-    name: "Plan",
-  },
-  {
-    path: "/",
     name: "medicine",
   },
   {
     path: "/",
     name: "Connect",
+  },
+  {
+    path: "/",
+    name: "Plan",
   },
 ];

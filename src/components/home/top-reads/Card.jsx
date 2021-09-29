@@ -3,7 +3,7 @@ import React from "react";
 
 function Card({ animate, data }) {
   return (
-    <>
+    <div className="card">
       <div
         className={`left ${animate ? "animate" : ""}`}
         style={{ backgroundImage: `url(${data.img})` }}
@@ -36,7 +36,7 @@ function Card({ animate, data }) {
           think of them more than 15 years later.
         </Typography>
       </div>
-    </>
+    </div>
   );
 }
 

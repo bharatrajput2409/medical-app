@@ -1,6 +1,6 @@
 import { Paper, Typography } from "@material-ui/core";
 import React from "react";
-import medicine_bottle from "../../../media/medicine_bottle.svg";
+import medicine_bottle from "../../../assets/media/medicine_bottle.svg";
 function Card1() {
   return (
     <Paper className="our-services-cards">

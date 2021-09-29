@@ -1,9 +1,7 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import Card1 from "./Card1";
-import Card2 from "./Card2";
-import Card3 from "./Card3";
-import Card4 from "./Card4";
+import Card from "./Card";
+import cards from "../../../assets/data/data";
 
 function Explore() {
   return (
@@ -12,16 +10,16 @@ function Explore() {
         Explore
       </Typography>
       <Grid container style={{ maxWidth: "1400px", margin: "0 auto" }}>
-        {[<Card1 />, <Card2 />, <Card3 />, <Card4 />].map((card, index) => (
+        {cards.map((card) => (
           <Grid
-            key={index}
+            key={card.title}
             item
             sm={6}
             md={3}
             xs={12}
             style={{ padding: "0.5rem" }}
           >
-            {card}
+            <Card card={card} />
           </Grid>
         ))}
       </Grid>

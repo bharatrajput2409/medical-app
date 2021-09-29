@@ -57,7 +57,7 @@ function TopReads() {
           <div className="pagination-container">
             {[
               <div key="prev" onClick={pageHandler(0, "prev")}>
-                <ArrowBackIosIcon />
+                <ArrowBackIosIcon style={{ color: "white" }} />
               </div>,
               ...data.map((item, index) => (
                 <div key={item.img} onClick={pageHandler(index, "curr")}>
@@ -67,7 +67,7 @@ function TopReads() {
                 </div>
               )),
               <div key="next" onClick={pageHandler(0, "next")}>
-                <ArrowForwardIosIcon />
+                <ArrowForwardIosIcon style={{ color: "white" }} />
               </div>,
             ]}
           </div>

@@ -1,17 +1,17 @@
 import { makeStyles, Paper, Typography } from "@material-ui/core";
 import React from "react";
-import diet_img from "../../../media/explore_diet.svg";
+import proptypes from "prop-types";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& $image": {
       transform: "translate(0,-80px)",
       transition: "transform 300ms",
     },
-    background: "#00AB66",
+    background: "white",
     padding: ".5rem",
     height: "80px",
     "& $heading": {
-      color: "white",
+      color: "rgba(0,0,0,.8)",
       textAlign: "center",
       transform: "translate(0,-60px)",
     },
@@ -27,20 +27,23 @@ const useStyles = makeStyles((theme) => ({
   heading: {},
   image: {},
 }));
-function Card3() {
+function Card({ card }) {
   const classes = useStyles();
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root} elevation="5">
       <img
-        src={diet_img}
-        alt="image with burger and eggs"
+        src={require("../../../assets/media/explore_diet.svg").default}
+        alt={card.title}
         className={classes.image}
       />
       <Typography variant="h4" component="h4" className={classes.heading}>
-        Diet Plan
+        {card.title}
       </Typography>
     </Paper>
   );
 }
+Card.prototype = {
+  card: proptypes.object.isRequired,
+};
 
-export default Card3;
+export default Card;

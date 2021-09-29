@@ -2,17 +2,19 @@ import { Grid, makeStyles, Paper, Typography } from "@material-ui/core";
 import { Facebook, Instagram, LinkedIn } from "@material-ui/icons";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../media/logo.svg";
-import footer_img from "../../media/footer_img.svg";
+import logo from "../../assets/media/logo.svg";
+import footer_img from "../../assets/media/footer_img.svg";
 const useStyles = makeStyles((theme) => ({
   root: {
     background: "white",
     marginTop: "1rem",
     position: "relative",
     overflow: "hidden",
+    padding: "0.5rem",
   },
   grid: {
     maxWidth: "800px",
+    width: "100%",
   },
   companyInfo: {
     padding: "2rem 1rem",
@@ -50,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
     right: "-100px",
     top: "-100px",
     opacity: "0.8",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 }));
 function Footer() {
@@ -76,12 +81,12 @@ function Footer() {
           <Grid item xs={12} style={{ paddingBottom: "2rem" }}>
             <Typography>© 2021 Privacy policy Manage cookies</Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} md={3}>
             <Facebook className={classes.socialIcons} />
             <LinkedIn className={classes.socialIcons} />
             <Instagram className={classes.socialIcons} />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} md={3} style={{ padding: "0 .5rem" }}>
             <Typography variant="h6">Popular</Typography>
             <Link to="/health" className={classes.link}>
               Health Articles
@@ -93,7 +98,7 @@ function Footer() {
               Health Articles
             </Link>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} md={3}>
             <Typography variant="h6">Popular</Typography>
             <Link to="/health" className={classes.link}>
               Health Articles
@@ -105,7 +110,7 @@ function Footer() {
               Health Articles
             </Link>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} md={3} style={{ padding: "0 .5rem" }}>
             <Typography variant="h6">Popular</Typography>
             <Link to="/health" className={classes.link}>
               Health Articles

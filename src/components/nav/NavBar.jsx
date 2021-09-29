@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -7,6 +7,8 @@ import InputBase from "@material-ui/core/InputBase";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import { links } from "./links";
+import Menu from "@material-ui/icons/Menu";
+import SmallNav from "./SmallNav";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     [theme.breakpoints.up("sm")]: {
@@ -64,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       padding: "0 10rem",
     },
+    borderBottom: "1px solid rgba(0,0,0,0.1)",
   },
   linkcontainer: {
     display: "flex",
@@ -76,14 +78,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     padding: "0 1.5rem",
   },
+  listbtns: {
+    textAlign: "center",
+  },
 }));
-
 export default function SearchAppBar() {
   const classes = useStyles();
-
+  const [drawerStatus, setDrawerStatus] = useState(0);
+  const handleDrawer = () => {
+    setDrawerStatus(!drawerStatus);
+  };
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.appbar}>
+      <AppBar position="fixed" elevation="0" className={classes.appbar}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
             Medico
@@ -113,8 +120,12 @@ export default function SearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
+          <IconButton onClick={handleDrawer}>
+            <Menu />
+          </IconButton>
         </Toolbar>
       </AppBar>
+      <SmallNav handleDrawer={handleDrawer} open={drawerStatus} />
     </div>
   );
 }

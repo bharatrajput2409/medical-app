@@ -7,7 +7,7 @@
   color: white;
   display: flex;
   align-items: center;
-  background-image: url("/src/media/top_banner_img.svg");
+  background-image: url("/src/assets/media/top_banner_img.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -94,7 +94,7 @@
   bottom: 0;
   transform: skewY(5deg);
 }
-.top-reads-container .top {
+.top-reads-container .top > div.card {
   position: relative;
   z-index: 1;
   max-width: 1000px;
@@ -104,24 +104,27 @@
   padding: 0.5rem;
   min-height: 300px;
   display: flex;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 .top-reads-container .pagination-container {
   position: absolute;
-  bottom: -10px;
+  bottom: -0x;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
+  z-index: 100;
 }
 .top-reads-container .pagination-container .page {
   padding: 0.3rem;
   margin: 0.25rem 0.5rem;
   transition: transform 100ms ease-out;
-  background: tomato;
+  background: white;
 }
 .top-reads-container .pagination-container .page.active {
-  transform: scale(1.5, 1.5);
+  transform: scale(1.4, 1.4);
+  border-radius: 0;
 }
 .top-reads-container .pagination-container > div {
   cursor: pointer;
@@ -143,8 +146,9 @@
   max-height: 280px;
 }
 .top-reads-container .top .right .heading {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 32px;
+  text-align: justify;
   font-weight: 500;
 }
 @keyframes animate_top_reads_img {
@@ -179,4 +183,25 @@
 }
 .top-reads-container .top .right .content.animate {
   animation: animate_top_reads_content 500ms ease-in-out;
+}
+.top-reads-container .top .right .content {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .top-reads-container .top > div.card {
+    flex-direction: column;
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem);
+  }
+  .top-reads-container .top > div.card .left {
+    display: none;
+  }
+  .top-reads-container .top .right {
+    width: 100%;
+  }
+  .top-reads-container .top .right .heading {
+    font-size: 18px;
+  }
 }

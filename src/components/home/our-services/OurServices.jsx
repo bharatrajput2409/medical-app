@@ -13,6 +13,7 @@ function OurServices() {
       <Grid container style={{ maxWidth: "1400px", margin: "1rem auto" }}>
         {[<Card1 />, <Card2 />, <Card3 />, <Card1 />].map((item, index) => (
           <Grid
+            key={index}
             item
             xs={12}
             md={6}

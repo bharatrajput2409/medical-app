@@ -1,7 +1,7 @@
 import { Paper, Typography } from "@material-ui/core";
 import React from "react";
-import heart_with_wings from "../../../media/heart_with_wings.svg";
-import single_ellipse from "../../../media/single_ellipse.svg";
+import heart_with_wings from "../../../assets/media/heart_with_wings.svg";
+import single_ellipse from "../../../assets/media/single_ellipse.svg";
 function Card1() {
   return (
     <Paper className="our-services-cards">

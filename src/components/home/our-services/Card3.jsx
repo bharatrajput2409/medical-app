@@ -1,6 +1,6 @@
 import { Paper, Typography } from "@material-ui/core";
 import React from "react";
-import card_triangle from "../../../media/card_triangle.svg";
+import card_triangle from "../../../assets/media/card_triangle.svg";
 function Card1() {
   return (
     <Paper className="our-services-cards">

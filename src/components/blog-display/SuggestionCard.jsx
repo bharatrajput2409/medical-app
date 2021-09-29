@@ -1,7 +1,7 @@
 import { Link, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
-import image from "../../media/bharat_dark_bg.png";
+import image from "../../assets/media/bharat_dark_bg.png";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: ".5rem",
